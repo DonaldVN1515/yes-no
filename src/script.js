@@ -1,4 +1,4 @@
-window.ioad = function () {
+window.onload = function () {
 	//canvas init
 	var canvas = document.getElementById('canvas');
 	var ctx = canvas.getContext('2d');
@@ -80,8 +80,6 @@ function yesClick() {
 }
 
 function noHover() {
-	handlePlayer();
-
 	var x = Math.floor(Math.random() * window.innerWidth);
 	var y = Math.floor(Math.random() * window.innerHeight);
 	document.getElementById('btnNo').style.left = x + 'px';
