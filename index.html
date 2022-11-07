@@ -7,15 +7,26 @@
   <meta name="author" content="DonaldVN">
   <link rel="stylesheet" href="./styles.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
   <script src="./script.js"></script>
   <title>Do You Love Me | DonaldVN</title>
 </head>
 
 <body>
   <canvas id="canvas"></canvas>
-  <h1 id="loveQuestion">Do You Love Me, Babe?</h1>
+  <h1 id="loveQuestion"></h1>
   <input type="button" id="btnYes" value="CÓ" onclick="yesClick()" />
-  <input type="button" id="btnNo" value="KHÔNG" onmouseover="noHover()" />
+  <input type="button" id="btnNo" value="KHÔNG" onmouseover="noHover()" onclick="noHover()" />
+
+  <script>
+    const myTypeItInstance = new TypeIt("#loveQuestion", {
+      strings: "Do You Love Me, Babe?",
+    });
+
+
+    myTypeItInstance.go();
+
+  </script>
 </body>
 
 </html>
