@@ -76,9 +76,12 @@ window.ioad = function () {
 
 function yesClick() {
 	alert('Love youuu too ❤️❤️❤️');
+	handlePlayer();
 }
 
 function noHover() {
+	handlePlayer();
+
 	var x = Math.floor(Math.random() * window.innerWidth);
 	var y = Math.floor(Math.random() * window.innerHeight);
 	document.getElementById('btnNo').style.left = x + 'px';
