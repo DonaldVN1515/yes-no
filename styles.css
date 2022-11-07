@@ -10,6 +10,8 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background: #6b92b9;
+	background: linear-gradient(to right, #7ee8fa, #eec0c6);
+	overflow: hidden;
 }
 canvas {
 	display: block;
@@ -40,7 +42,9 @@ input {
 	transform: translateX(-50%);
 	bottom: 20%;
 	background-color: #7bd806;
+	transition: 0.3s;
 	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #btnNo {
@@ -50,4 +54,20 @@ input {
 	top: 50%;
 	background-color: #f4511e;
 	transition: 0.3s;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#btnYes:hover {
+	filter: brightness(90%);
+}
+@media screen and (max-width: 1024px) {
+	#loveQuestion {
+		top: 35%;
+		font-size: 60px;
+	}
+}
+@media screen and (max-width: 768px) {
+	#loveQuestion {
+		top: 30%;
+		font-size: 50px;
+	}
 }
