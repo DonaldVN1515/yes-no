@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="DonaldVN">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./src/styles.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
-  <script src="./script.js"></script>
+  <script src="./src/script.js"></script>
   <title>Do You Love Me | DonaldVN</title>
 </head>
 
@@ -18,6 +18,12 @@
   <input type="button" id="btnYes" value="CÓ" onclick="yesClick()" />
   <input type="button" id="btnNo" value="KHÔNG" onmouseover="noHover()" onclick="noHover()" />
 
+  <div class="music">
+    <img class="playerbtn" onclick="handlePlayer()" src="./src/images/music-icon.png" alt="">
+    <audio autoplay id="audio" class="player">
+      <source src="./src/audio/baby-can-you-kiss-me.mp3" type="audio/mp3">
+    </audio>
+  </div>
   <script>
     const myTypeItInstance = new TypeIt("#loveQuestion", {
       strings: "Do You Love Me, Babe?",
@@ -26,6 +32,21 @@
 
     myTypeItInstance.go();
 
+    // MUSIC
+    const audioPlayer = document.querySelector('#audio')
+
+    let isPlayer = false;
+
+    const handlePlayer = () => {
+      if (isPlayer) {
+        audioPlayer.pause()
+        isPlayer = false
+      } else {
+        audioPlayer.play()
+        isPlayer = true
+      }
+
+    };
   </script>
 </body>
 
